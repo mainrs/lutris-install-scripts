@@ -1,0 +1,20 @@
+name: 'The Librarian (Special Edition)'
+game_slug: 'the-librarian-special-edition'
+year: 2020
+
+slug: 'the-librarian-special-edition-itchio'
+version: itch.io
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/The Librarian.exe
+    arch: win64
+    prefix: $GAMEDIR/prefix
+    working_dir: $GAMEDIR/prefix
+  files:
+  - installer: N/A:Please select the itch.io archive
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: $installer
