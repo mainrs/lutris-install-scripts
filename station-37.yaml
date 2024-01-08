@@ -1,0 +1,20 @@
+name: 'Station 37'
+game_slug: 'station-37'
+year: 2023
+
+slug: 'station-37-itchio'
+version: itch.io
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/Station37.exe
+    arch: win64
+    prefix: $GAMEDIR/prefix
+    working_dir: $GAMEDIR/prefix
+  files:
+  - installer: N/A:Please select the itch.io archive
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: $installer
