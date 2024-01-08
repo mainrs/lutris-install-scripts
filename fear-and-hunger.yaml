@@ -1,0 +1,20 @@
+name: 'Fear & Hunger'
+game_slug: 'fear-hunger'
+year: 2017
+
+slug: 'fear-hunger-itchio'
+version: itch.io
+runner: linux
+
+script:
+  game:
+    exe: $GAMEDIR/Game
+    arch: lin64
+    working_dir: $GAMEDIR
+  files:
+  - installer: N/A:Please select the itch.io archive
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: $installer
+  - chmodx: $GAMEDIR/Game

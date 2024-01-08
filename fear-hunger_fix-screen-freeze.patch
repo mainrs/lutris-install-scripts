@@ -1,0 +1,13 @@
+diff --git a/www/js/rpg_core.js b/www/js/rpg_core.js
+index 28da0c0..308fe31 100644
+--- a/www/js/rpg_core.js
++++ b/www/js/rpg_core.js
+@@ -1869,7 +1869,7 @@ Graphics.tickEnd = function() {
+  * @param {Stage} stage The stage object to be rendered
+  */
+ Graphics.render = function(stage) {
+-    if (this._skipCount === 0) {
++    if (this._skipCount <= 0) {
+         var startTime = Date.now();
+         if (stage) {
+             this._renderer.render(stage);
